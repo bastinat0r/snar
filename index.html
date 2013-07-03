@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Indoor-Localisation</title>
+
+    <meta name="description" content="slides for SNaR-presentation">
+    <meta name="author" content="Andreas Pfohl, Sebastian Mai">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <h1>Indoor-<br />Localisation</h1>
+          <p>von Andreas Pfohl und Sebastian Mai</p>
+        </section>
+        
+        <section data-markdown>
+          ## Gliederung
+          * Lokalisierungsmethoden
+          * Ultraschall
+        </section>
+        
+        <section>
+          <img src="./images/systems.jpg" />
+          <p><small>Quelle: geometh.ethz.ch</small></p>
+        </section>
+        
+        <section>
+          <section data-markdown>
+            ## Globales Navigationssatellitensystem
+          </section>
+
+          <section>
+            <img src="./images/ConstellationGPS.gif" width="50%" />
+            <p><small>Quelle: Wikipedia</small></p>
+          </section>
+          
+          <section data-markdown>
+            ### Nachteile
+            * starker Signalverlust durch Wände
+            * Reflexionen
+            * nur für grobe Raumlokalisierung
+          </section>
+        </section>
+        
+        <section>
+          <section data-markdown>
+            ## Vorgetäuschtes GNSS
+          </section>
+          
+          <section data-markdown>
+            ### Vorteile
+            * höhere Signalstärke
+            * Signale gehen durch Wände
+            * bessere Nutzung für indoor
+          </section>
+          
+          <section data-markdown>
+            ### Nachteile
+            * geringe Genauigkeit
+          </section>
+        </section>
+        
+        <section>
+          <section data-markdown>
+            ## Funksignale allgemein
+          </section>
+          
+          <section data-markdown>
+            ## Laufzeitmessung
+          </section>
+          
+          <section data-markdown>
+            ## Richtungsmessung
+          </section>
+        </section>
+        
+        <section>
+          <section data-markdown>
+            ## Optische Verfahren
+          </section>
+          
+          <section data-markdown>
+            ## Laserverfolgung
+          </section>
+          
+          <section data-markdown>
+            ## Kameras
+          </section>
+          
+          <section data-markdown>
+            ## Nachteile
+            * Laser sehr teuer und groß
+            * Kameras sind sehr rechenaufwendig
+          </section>
+        </section>
+        
+        <section>
+          <section data-markdown>
+            # Ultraschall
+          </section>
+          
+          <section data-markdown>
+            ## Sprechende Infrastruktur
+          </section>
+          
+          <section data-markdown>
+            ## Sprechender Knoten
+          </section>
+          
+          <section data-markdown>
+            ## Unterschied
+            * Ort der Berechnung
+          </section>
+        </section>
+        
+        <section>
+          <section data-markdown>
+            ## Triangulation
+          </section>
+          
+          <section>
+            <img src="./images/triangulation.png" />
+          </section>
+          
+          <section data-markdown>
+            ## d = v·t
+          </section>
+        </section>
+        
+        <section>
+          <section data-markdown>
+            ## Trilateration
+          </section>
+          
+          <section>
+            <img src="./images/gps-trilat1.gif" width="50%" />
+            <p><small>Quelle: electronics.howstuffworks.com/gadgets/travel/gps1.htm</small></p>
+          </section>
+          
+          <section>
+            <img src="./images/gps-trilat2.gif" width="50%" />
+            <p><small>Quelle: electronics.howstuffworks.com/gadgets/travel/gps1.htm</small></p>
+          </section>
+          
+          <section>
+            <img src="./images/gps-trilat3.gif" width="50%" />
+            <p><small>Quelle: electronics.howstuffworks.com/gadgets/travel/gps1.htm</small></p>
+          </section>
+        </section>
+        
+        <section>
+          <section data-markdown>
+            ## Probleme
+          </section>
+          
+          <section data-markdown>
+            * Lufttemperatur
+            * Luftfeuchtigkeit
+            * Luftdruck
+            ---
+            * Reflexionen
+            * Absorptionen
+          </section>
+          
+          <section>
+            <img src="./images/temperatur.png" />
+            <p><small>101,325 kP, 50 %</small></p>
+            <p><small>Daten: www.sengpielaudio.com/Rechner-luftdruck.htm</small></p>
+          </section>
+          
+          <section>
+            <img src="./images/feuchtigkeit.png" />
+            <p><small>20 °C, 101,325 kPa</small></p>
+            <p><small>Daten: www.sengpielaudio.com/Rechner-luftdruck.htm</small></p>
+          </section>
+          
+          <section>
+            <img src="./images/druck.png" />
+            <p><small>20 °C, 50 %</small></p>
+            <p><small>Daten: www.sengpielaudio.com/Rechner-luftdruck.htm</small></p>
+          </section>
+        </section>
+
+        <section data-markdown>
+          ## Quellen
+          * Chen, Yongguang und Hisashi Kobayashi: Signal Strength Ba- sed Indoor Geolocation.
+          * Cobb, H. Stewart: GPS Pseudolites: Theory, Design, and Applications.
+          * Mautz, Rainer: Overview of Current Indoor Positioning Systems.
+          * Wikipedia: Schallgeschwindigkeit
+        </section>
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
